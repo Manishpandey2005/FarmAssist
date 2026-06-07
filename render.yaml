@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: agriculture-backend
+    env: python
+    buildCommand: |
+      cd backend && pip install -r requirements.txt
+      cd ../frontend && npm install && npm run build
+    startCommand: cd backend && gunicorn --bind 0.0.0.0:$PORT app:app
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: MONGO_URI
+        value: mongodb+srv://username:password@cluster.mongodb.net/agriculture
+      - key: OPENWEATHER_API_KEY
+        value: your-openweather-api-key
+      - key: FLASK_ENV
+        value: production
