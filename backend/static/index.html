@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FarmAssist - Backend Running</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .status { color: green; font-size: 24px; margin: 20px 0; }
+        .endpoints { text-align: left; background: #f5f5f5; padding: 20px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 FarmAssist Backend</h1>
+        <div class="status">✅ Server is running on port 8000</div>
+        
+        <div class="endpoints">
+            <h3>Available API Endpoints:</h3>
+            <ul>
+                <li><strong>POST /auth/signup</strong> - User registration</li>
+                <li><strong>POST /auth/login</strong> - User login</li>
+                <li><strong>POST /predict/leaf</strong> - Disease detection</li>
+                <li><strong>POST /predict/crop</strong> - Fertilizer recommendation</li>
+                <li><strong>GET /weather</strong> - Weather data</li>
+                <li><strong>GET /market</strong> - Market prices</li>
+                <li><strong>GET /alerts</strong> - Pest alerts</li>
+                <li><strong>POST /alerts</strong> - Submit pest alert</li>
+            </ul>
+        </div>
+        
+        <p>To run the full application:</p>
+        <ol>
+            <li>Start this backend server (already running)</li>
+            <li>In another terminal: <code>cd frontend && npm start</code></li>
+            <li>Access frontend at: <a href="http://localhost:3000">http://localhost:3000</a></li>
+        </ol>
+    </div>
+</body>
+</html>
